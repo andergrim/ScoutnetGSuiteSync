@@ -118,7 +118,7 @@ function checkAndUpdateMember(member, config)
       var updateEmail = false, updateGivenName = false, updateFamilyName = false;
       var userSecondaryEmail = getSecondaryEmail(user.emails);
       
-      if (member.email !== user.customSchemas.Scoutnet.Epost && member.email !== userSecondaryEmail) updateEmail = true;
+      if (member.email !== user.customSchemas.Scoutnet.Epost || member.email !== userSecondaryEmail) updateEmail = true;
       if (member.firstName !== user.name.givenName) updateGivenName = true;
       if (member.lastName !== user.name.familyName) updateFamilyName = true;
       
