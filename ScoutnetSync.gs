@@ -8,7 +8,7 @@ function performScoutnetSync()
   // Fetch configuration and build request URI
   var config = getScoutnetSyncConfig();
   var apiUrl = config.apiUrl + '?id=' + config.apiId + '&key=' + config.apiKey + '&list_id=' + config.listId;
-  var end, start;
+  var endTime, startTime;
   
   // Timer
   startTime = new Date();
